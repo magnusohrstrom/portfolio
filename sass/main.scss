@@ -1,6 +1,113 @@
+@import 'varmix';
+@import 'header';
+@import "nav";
+
+html {
+
+}
 body{
-  height: auto;
   margin:0;
   width: 100%;
   padding:0;
+  //overflow-x: hidden;
+  z-index: 0;
+
+}
+//Typogrphy
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1 {
+  margin:0;
+}
+a,h1,,h2,h3,.art-h1{
+  color:purple;
+  font-family: $art-font;
+}
+
+.wrapper {
+  margin-top: 3em;
+  height:10vh;
+  width: 100%;
+}
+
+.half-site {
+  height: 160vw;
+  width:160vw;
+  border-left:1rem solid black;
+  z-index: 1;
+  overflow-y: hidden;
+  @include transition(all 1s ease);
+  & h1{
+    cursor: pointer;
+    width: auto;
+    color:white;
+    font-size: 3em;
+    left:2px;
+    margin:0 0 0 2rem;
+    @include transition(all 1s ease);
+  }
+  &.active {
+    @include transform(translate(0,0));
+    z-index: 2000;
+    margin-bottom: 60em;
+    width: 100%;
+    & h1 {
+    }
+  }
+  @include breakpoint(small){
+    & h1 {
+      font-size: 2em;
+    }
+  };
+}
+
+.dev-section {
+  background: $yellow;
+
+  //border:1rem solid black;
+  @include transform(rotate(45deg) translate(5%,30%));
+
+  & h1{
+
+  }
+}
+
+.art-section {
+  background: $purple;
+  @include transform(rotate(45deg) translate(-58%, -30%));
+
+}
+.cv-section {
+  background: red;
+    @include transform(rotate(45deg) translate(-120%, -90%));
+}
+
+.triangle-span {
+  @include flexbox();
+  @include justify-content(flex-start);
+  @include align-items(center);
+  background:black;
+  height: 5rem;
+}
+
+.triangle-container {
+  display:none;
+  &.active{
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(flex-start);
+    @include align-items(center);
+  }
+
+
+}
+
+.triangle-content {
+  width: 70%;
+  height: 100vh;
+  border:1px solid black;
 }
