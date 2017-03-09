@@ -1,0 +1,53 @@
+.cv-figure {
+  margin: 0 1em 1em 0;
+  height: auto;
+  width: 30em;
+  padding:1em;
+  background:black;
+
+  & h3,p,a {
+    color:white;
+    margin-top: 0.3em;
+  }
+  & p {
+    margin-top: 0;
+  }
+  & a {
+    margin-top: 2rem;
+    font-size:3em;
+    font-weight: 400;
+    font-style: italic;
+  }
+}
+
+.cv-h2{
+
+}
+
+.cv-container {
+  padding:0;
+  margin:0;
+
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(flex-start);
+  @include align-items(flex-start);
+  & h3 {
+    margin: 0 0 1em 0;
+    width: 100%;
+    font-size:2em;
+    background: black;
+    color:red;
+  }
+  & p {
+    font-size:1.2rem;
+  }
+
+}
+
+#cv {
+  @include flex-direction(row);
+  @include breakpoint(large){
+    @include flex-direction(column);
+  };
+}

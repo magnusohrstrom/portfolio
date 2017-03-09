@@ -1,6 +1,7 @@
 @import 'varmix';
 @import 'header';
-@import "nav";
+@import 'nav';
+@import 'cv';
 
 html {
 
@@ -9,9 +10,11 @@ body{
   margin:0;
   width: 100%;
   padding:0;
-  //overflow-x: hidden;
+  background: #83a4d4; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #83a4d4 , #b6fbff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #83a4d4 , #b6fbff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow-x: hidden;
   z-index: 0;
-
 }
 //Typogrphy
 a {
@@ -22,15 +25,26 @@ a {
 h1 {
   margin:0;
 }
-a,h1,,h2,h3,.art-h1{
-  color:purple;
+a,h1,,h2,h3,p,.art-h1{
+  color:black;
   font-family: $art-font;
+}
+h2{
+  font-size: 4rem;
+}
+h3{
+  font-size: 2.5rem;
+  font-style: italic;
+}
+p {
+  font-size: 1.5rem;
 }
 
 .wrapper {
   margin-top: 3em;
   height:10vh;
   width: 100%;
+  //overflow-x: hidden;
 }
 
 .half-site {
@@ -47,10 +61,13 @@ a,h1,,h2,h3,.art-h1{
     font-size: 3em;
     left:2px;
     margin:0 0 0 2rem;
-    @include transition(all 1s ease);
+
   }
   &.active {
     @include transform(translate(0,0));
+    position:absolute;
+    top:3rem;
+    height: 2800px;
     z-index: 2000;
     margin-bottom: 60em;
     width: 100%;
@@ -65,24 +82,18 @@ a,h1,,h2,h3,.art-h1{
 }
 
 .dev-section {
-  background: $yellow;
-
-  //border:1rem solid black;
+  background: $yellow; /* fallback for old browsers */
   @include transform(rotate(45deg) translate(5%,30%));
-
-  & h1{
-
-  }
 }
 
 .art-section {
   background: $purple;
-  @include transform(rotate(45deg) translate(-58%, -30%));
+  @include transform(rotate(45deg) translate(-60%, -33%));
 
 }
 .cv-section {
   background: red;
-    @include transform(rotate(45deg) translate(-120%, -90%));
+    @include transform(rotate(45deg) translate(-125%, -96%));
 }
 
 .triangle-span {
@@ -90,24 +101,121 @@ a,h1,,h2,h3,.art-h1{
   @include justify-content(flex-start);
   @include align-items(center);
   background:black;
+  @include transition(all 1s ease);
+  //margin-left: -4px;
   height: 5rem;
+  &.active{
+    background: white;
+    & h1{
+    color:black;
+    }
+  }
 }
 
 .triangle-container {
   display:none;
+  //overflow-x: hidden;
   &.active{
     width: 100%;
     @include flexbox();
     @include flex-direction(column);
     @include justify-content(flex-start);
     @include align-items(center);
+    @include breakpoint(medium){
+      @include justify-content(flex-end);
+    };
   }
-
-
 }
 
 .triangle-content {
+  margin:0 6rem 0 6rem;
   width: 70%;
   height: 100vh;
-  border:1px solid black;
+  @include breakpoint(xlarge){
+    width:90%;
+  };
+  @include breakpoint(xsmall){
+    width: 100%;
+  };
+}
+
+.icons {
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(flex-start);
+  @include align-items(center);
+  height: 4rem;
+  margin-top: 4rem;
+  & img {
+    height: 4rem;
+    margin-right: 1rem;
+
+  }
+}
+.projekt {
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(flex-start);
+  @include align-items(flex-start);
+  height: 500em;
+  width: 100%;
+
+  & h2 {
+    font-style: italic;
+    font-size: 5rem;
+  }
+  @include breakpoint(medium){
+    //@include align-items(center);
+  };
+}
+.projekt-container {
+  padding:0;
+  margin:0;
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  @include align-items(flex-start);
+  flex-wrap: wrap;
+  @include breakpoint(medium){
+    @include justify-content(center);
+  };
+
+}
+.projekt-figure {
+  margin: 0 2em 14em 0;
+  height: 20em;
+  width: 25em;
+  padding:1em;
+
+  background: black;
+  & h3,p,a {color:$yellow;}
+  & a {
+    margin-top: 2rem;
+    font-size:3em;
+    font-weight: 400;
+    font-style: italic;
+    @include breakpoint(large){
+      font-size: 2.2em;
+    };
+  }
+  & img {
+    @include transform(translate(10%,0%));
+    height: 100%;
+  }
+  @include breakpoint(large){
+    height: 15em;
+    width: 20em;
+  };
+}
+
+.cartoon {
+
+
+}
+#gees {
+  position: fixed;
+  top:6em;
+  left:4em;
+  height: 15em;
 }
