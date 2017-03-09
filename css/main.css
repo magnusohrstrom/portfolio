@@ -94,6 +94,11 @@ nav img {
   margin-right: 6rem;
   width: 40%; }
 
+.footer {
+  position: absolute;
+  bottom: 1em;
+  right: 5em; }
+
 .cv-figure {
   margin: 0 1em 1em 0;
   height: auto;
@@ -197,8 +202,8 @@ p {
   width: 100%; }
 
 .half-site {
-  height: 96vw;
-  width: 96vw;
+  height: 140vw;
+  width: 70vw;
   border-left: 1rem solid black;
   z-index: 1;
   -webkit-transition: all 1s ease;
@@ -232,29 +237,30 @@ p {
 .dev-section {
   background: #FFFF82;
   /* fallback for old browsers */
-  -webkit-transform: rotate(45deg) translate(5%, 30%);
-  -moz-transform: rotate(45deg) translate(5%, 30%);
-  -ms-transform: rotate(45deg) translate(5%, 30%);
-  -o-transform: rotate(45deg) translate(5%, 30%);
-  transform: rotate(45deg) translate(5%, 30%); }
+  -webkit-transform: rotate(45deg) translate(-5%, 12%);
+  -moz-transform: rotate(45deg) translate(-5%, 12%);
+  -ms-transform: rotate(45deg) translate(-5%, 12%);
+  -o-transform: rotate(45deg) translate(-5%, 12%);
+  transform: rotate(45deg) translate(-5%, 12%); }
 
 .art-section {
   background: #e5c3ff;
-  -webkit-transform: rotate(45deg) translate(-60%, -33%);
-  -moz-transform: rotate(45deg) translate(-60%, -33%);
-  -ms-transform: rotate(45deg) translate(-60%, -33%);
-  -o-transform: rotate(45deg) translate(-60%, -33%);
-  transform: rotate(45deg) translate(-60%, -33%); }
+  -webkit-transform: rotate(45deg) translate(-134%, -51%);
+  -moz-transform: rotate(45deg) translate(-134%, -51%);
+  -ms-transform: rotate(45deg) translate(-134%, -51%);
+  -o-transform: rotate(45deg) translate(-134%, -51%);
+  transform: rotate(45deg) translate(-134%, -51%); }
 
 .cv-section {
   background: red;
-  -webkit-transform: rotate(45deg) translate(-125%, -96%);
-  -moz-transform: rotate(45deg) translate(-125%, -96%);
-  -ms-transform: rotate(45deg) translate(-125%, -96%);
-  -o-transform: rotate(45deg) translate(-125%, -96%);
-  transform: rotate(45deg) translate(-125%, -96%); }
+  -webkit-transform: rotate(45deg) translate(-264%, -114%);
+  -moz-transform: rotate(45deg) translate(-264%, -114%);
+  -ms-transform: rotate(45deg) translate(-264%, -114%);
+  -o-transform: rotate(45deg) translate(-264%, -114%);
+  transform: rotate(45deg) translate(-264%, -114%); }
 
 .triangle-span {
+  position: static;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;

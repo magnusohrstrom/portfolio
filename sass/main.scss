@@ -51,8 +51,8 @@ p {
 }
 
 .half-site {
-  height: 96vw;
-  width:96vw;
+  height: 140vw;
+  width:70vw;
   border-left:1rem solid black;
   z-index: 1;
   //overflow-x: hidden;
@@ -86,21 +86,24 @@ p {
 
 .dev-section {
   background: $yellow; /* fallback for old browsers */
-  @include transform(rotate(45deg) translate(5%,30%));
+  //@include transform(rotate(45deg) translate(5%,30%));
+  @include transform(rotate(45deg) translate(-5%, 12%));
 }
 
 .art-section {
   background: $purple;
-  @include transform(rotate(45deg) translate(-60%, -33%));
+  //@include transform(rotate(45deg) translate(-60%, -33%));
+  @include transform(rotate(45deg) translate(-134%, -51%));
 
 }
 .cv-section {
   background: red;
-    @include transform(rotate(45deg) translate(-125%, -96%));
+    //@include transform(rotate(45deg) translate(-125%, -96%));
+    @include transform(rotate(45deg) translate(-264%, -114%));
 }
 
 .triangle-span {
-
+  position: static;
   @include flexbox();
   @include justify-content(flex-start);
   @include align-items(center);
