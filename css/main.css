@@ -154,6 +154,8 @@ nav img {
       flex-direction: column; } }
 
 body {
+  overflow-x: hidden;
+  position: relative;
   margin: 0;
   width: 100%;
   padding: 0;
@@ -163,7 +165,7 @@ body {
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #83a4d4, #b6fbff);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  overflow-x: hidden;
+  background-repeat: repeat-y;
   z-index: 0; }
 
 a {
@@ -197,7 +199,6 @@ p {
   width: 160vw;
   border-left: 1rem solid black;
   z-index: 1;
-  overflow: hidden;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -ms-transition: all 1s ease;
@@ -279,7 +280,8 @@ p {
       color: black; }
 
 .triangle-container {
-  display: none; }
+  display: none;
+  overflow-x: hidden; }
   .triangle-container.active {
     width: 100%;
     display: -webkit-box;
