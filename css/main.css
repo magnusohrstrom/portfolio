@@ -197,7 +197,7 @@ p {
   width: 160vw;
   border-left: 1rem solid black;
   z-index: 1;
-  overflow-y: hidden;
+  overflow: hidden;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -ms-transition: all 1s ease;

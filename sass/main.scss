@@ -52,7 +52,7 @@ p {
   width:160vw;
   border-left:1rem solid black;
   z-index: 1;
-  overflow-y: hidden;
+  overflow: hidden;
   @include transition(all 1s ease);
   & h1{
     cursor: pointer;
