@@ -158,7 +158,6 @@ html, body {
 
 body {
   overflow-x: hidden;
-  position: relative;
   margin: 0;
   width: 100%;
   padding: 0;
@@ -198,8 +197,8 @@ p {
   width: 100%; }
 
 .half-site {
-  height: 160vw;
-  width: 160vw;
+  height: 96vw;
+  width: 96vw;
   border-left: 1rem solid black;
   z-index: 1;
   -webkit-transition: all 1s ease;
@@ -436,7 +435,7 @@ p {
 #gees {
   position: fixed;
   top: 6em;
-  left: 4em;
+  right: 4em;
   height: 15em; }
 
 /*# sourceMappingURL=main.css.map */

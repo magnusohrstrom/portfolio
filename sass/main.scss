@@ -9,7 +9,7 @@ html,body {
 }
 body{
   overflow-x: hidden;
-  position: relative;
+  //position: relative;
   margin:0;
   width: 100%;
   padding:0;
@@ -51,8 +51,8 @@ p {
 }
 
 .half-site {
-  height: 160vw;
-  width:160vw;
+  height: 96vw;
+  width:96vw;
   border-left:1rem solid black;
   z-index: 1;
   //overflow-x: hidden;
@@ -223,6 +223,6 @@ p {
 #gees {
   position: fixed;
   top:6em;
-  left:4em;
+  right:4em;
   height: 15em;
 }
