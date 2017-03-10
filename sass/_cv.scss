@@ -21,6 +21,7 @@
   }
   @include breakpoint(small){
     padding:0 1em 0 0;
+    padding-top: 1em;
     width: 100%;
   };
 
@@ -68,8 +69,10 @@
 
 #portrait {
   background:black;
-  padding:1em;
+
   @include breakpoint(small){
     width: 100vw;
+    padding:1em 1em 0 0;
+    margin:0;
   };
 }

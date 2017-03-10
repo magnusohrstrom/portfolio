@@ -47,7 +47,7 @@ p {
 
 .wrapper {
   margin-top: 3em;
-  height:1500px;
+  height:1700px;
   width: 100%;
   overflow: hidden;
 }
@@ -172,7 +172,7 @@ p {
   @include breakpoint(xlarge){
     width:90%;
   };
-  @include breakpoint(xsmall){
+  @include breakpoint(small){
     width: 100%;
     & p, img {
       margin-left: 0.3em;
@@ -256,10 +256,19 @@ p {
   & img {
     @include transform(translate(10%,0%));
     height: 100%;
+    @include transition(all 1s ease);
+    cursor: pointer;
+    &.active {
+      width: 30rem;
+      height: auto;
+      @include transition(all 1s ease);
+    }
+
     @include breakpoint(small){
       height: 83%;
     };
   }
+
   @include breakpoint(large){
     height: 15em;
     width: 20em;

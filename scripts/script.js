@@ -9,6 +9,18 @@ function openNav(){
   nav.classList.toggle('active');
 }
 
+function toggleActiveImg(){
+  
+  this.classList.toggle('active');
+};
+
+var images = document.getElementsByClassName('figure-img');
+for (let i = 0; i < images.length; i++) {
+  images[i].addEventListener('click',toggleActiveImg);
+}
+
+
+
 function toggleActive() {
   var elem = document.getElementsByClassName('half-site');
   var kids = this.parentNode.parentNode.children;
@@ -30,7 +42,6 @@ function toggleActive() {
       }
   }
 }
-
 }
 
 var halfsiteH1 = document.getElementsByClassName('half-site-h1');
