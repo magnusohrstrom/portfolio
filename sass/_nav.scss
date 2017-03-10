@@ -4,32 +4,39 @@ header{
   top:0;
   color: white;
   width: 100vw;
-  height: 3rem;
+  height: 2rem;
   z-index: 3000;
   @include flexbox();
   @include flex-direction(row);
   @include justify-content(center);
   @include align-content(center);
   & a {
-
     font-size: 1.3em;
     font-family:$art-font;
     color:white;
   }
-
+  @include breakpoint(medium){
+  height: 2.2rem;
+  };
 }
 nav{
   & img {
     height: 1.5em;
+    @include breakpoint(small){
+
+    };
   }
 }
 
 .container-header {
-  width: 70%;
+  width: 98%;
   @include flexbox();
   @include flex-direction(row);
   @include justify-content(space-between);
   @include align-items(center);
+  @include breakpoint(medium){
+    width: 98%;
+  };
 
 }
 
@@ -47,7 +54,12 @@ nav{
 }
 //Type
 #title {
-  font-size: 1.5em;
+  font-size: 1.3em;
+  margin-left: 2rem;
+  @include breakpoint(medium){
+    margin-left: 1rem;
+    font-size: 1.2em;
+  };
 }
 
 #header-nav {
@@ -58,6 +70,9 @@ nav{
   margin-right:6rem;
 
   width: 40%;
+  @include breakpoint(medium){
+  display: none;
+  };
 }
 
 #burger {

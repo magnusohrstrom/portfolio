@@ -11,7 +11,7 @@ header {
   top: 0;
   color: white;
   width: 100vw;
-  height: 3rem;
+  height: 2rem;
   z-index: 3000;
   display: -webkit-box;
   display: -moz-box;
@@ -35,12 +35,15 @@ header {
     font-size: 1.3em;
     font-family: "Muli", sans-serif;
     color: white; }
+  @media (max-width: 854px) {
+    header {
+      height: 2.2rem; } }
 
 nav img {
   height: 1.5em; }
 
 .container-header {
-  width: 70%;
+  width: 98%;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -59,6 +62,9 @@ nav img {
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center; }
+  @media (max-width: 854px) {
+    .container-header {
+      width: 98%; } }
 
 .overlay {
   width: 0;
@@ -74,7 +80,12 @@ nav img {
     width: 100%; }
 
 #title {
-  font-size: 1.5em; }
+  font-size: 1.3em;
+  margin-left: 2rem; }
+  @media (max-width: 854px) {
+    #title {
+      margin-left: 1rem;
+      font-size: 1.2em; } }
 
 #header-nav {
   display: -webkit-box;
@@ -93,6 +104,9 @@ nav img {
   align-items: center;
   margin-right: 6rem;
   width: 40%; }
+  @media (max-width: 854px) {
+    #header-nav {
+      display: none; } }
 
 .footer {
   position: absolute;
@@ -231,7 +245,7 @@ p {
     -o-transform: translate(0, 0);
     transform: translate(0, 0);
     position: absolute;
-    top: 3rem;
+    top: 2rem;
     height: 2800px;
     z-index: 2000;
     margin-bottom: 60em;
@@ -309,9 +323,14 @@ p {
     .triangle-span {
       height: 3rem; } }
   .triangle-span.active {
-    background: white; }
+    background: white;
+    height: 1.7rem; }
     .triangle-span.active h1 {
-      color: black; }
+      color: black;
+      font-size: 1.3em; }
+      @media (max-width: 854px) {
+        .triangle-span.active h1 {
+          font-size: 1.3em; } }
 
 .triangle-container {
   display: none;
