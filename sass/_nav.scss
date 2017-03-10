@@ -29,14 +29,12 @@ nav{
 }
 
 .container-header {
-  width: 98%;
+  width: 100%;
   @include flexbox();
   @include flex-direction(row);
   @include justify-content(space-between);
   @include align-items(center);
-  @include breakpoint(medium){
-    width: 98%;
-  };
+
 
 }
 
@@ -57,7 +55,7 @@ nav{
   font-size: 1.3em;
   margin-left: 2rem;
   @include breakpoint(medium){
-    margin-left: 1rem;
+    margin-left: 1.2rem;
     font-size: 1.2em;
   };
 }
