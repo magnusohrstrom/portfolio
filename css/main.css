@@ -220,6 +220,10 @@ p {
     font-size: 3em;
     left: 2px;
     margin: 0 0 0 2rem; }
+    @media (max-width: 464px) {
+      .half-site h1 {
+        margin: 0;
+        font-size: 1.6em; } }
   .half-site.active {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
@@ -232,9 +236,6 @@ p {
     z-index: 2000;
     margin-bottom: 60em;
     width: 100%; }
-  @media (max-width: 464px) {
-    .half-site h1 {
-      font-size: 2em; } }
 
 .dev-section {
   background: #FFFF82;
@@ -244,6 +245,13 @@ p {
   -ms-transform: rotate(45deg) translate(5%, 30%);
   -o-transform: rotate(45deg) translate(5%, 30%);
   transform: rotate(45deg) translate(5%, 30%); }
+  @media (max-width: 854px) {
+    .dev-section {
+      -webkit-transform: rotate(45deg) translate(6%, 38%);
+      -moz-transform: rotate(45deg) translate(6%, 38%);
+      -ms-transform: rotate(45deg) translate(6%, 38%);
+      -o-transform: rotate(45deg) translate(6%, 38%);
+      transform: rotate(45deg) translate(6%, 38%); } }
 
 .art-section {
   background: #e5c3ff;
@@ -252,6 +260,13 @@ p {
   -ms-transform: rotate(45deg) translate(-60%, -33%);
   -o-transform: rotate(45deg) translate(-60%, -33%);
   transform: rotate(45deg) translate(-60%, -33%); }
+  @media (max-width: 854px) {
+    .art-section {
+      -webkit-transform: rotate(45deg) translate(-50%, -18%);
+      -moz-transform: rotate(45deg) translate(-50%, -18%);
+      -ms-transform: rotate(45deg) translate(-50%, -18%);
+      -o-transform: rotate(45deg) translate(-50%, -18%);
+      transform: rotate(45deg) translate(-50%, -18%); } }
 
 .cv-section {
   background: red;
@@ -260,6 +275,13 @@ p {
   -ms-transform: rotate(45deg) translate(-125%, -96%);
   -o-transform: rotate(45deg) translate(-125%, -96%);
   transform: rotate(45deg) translate(-125%, -96%); }
+  @media (max-width: 854px) {
+    .cv-section {
+      -webkit-transform: rotate(45deg) translate(-106%, -73%);
+      -moz-transform: rotate(45deg) translate(-106%, -73%);
+      -ms-transform: rotate(45deg) translate(-106%, -73%);
+      -o-transform: rotate(45deg) translate(-106%, -73%);
+      transform: rotate(45deg) translate(-106%, -73%); } }
 
 .triangle-span {
   display: -webkit-box;
@@ -283,6 +305,9 @@ p {
   -o-transition: all 1s ease;
   transition: all 1s ease;
   height: 5rem; }
+  @media (max-width: 464px) {
+    .triangle-span {
+      height: 3rem; } }
   .triangle-span.active {
     background: white; }
     .triangle-span.active h1 {
