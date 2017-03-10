@@ -4,7 +4,7 @@
 @import 'cv';
 
 html,body {
-  height: auto;
+  //height: auto;
   overflow-x: hidden;
 }
 body{
@@ -21,6 +21,10 @@ body{
 a {
   text-decoration: none;
   cursor: pointer;
+  @include transition(all 0.7s ease);
+  &:hover {
+    color:$yellow;
+  }
 }
 
 h1 {
@@ -43,23 +47,18 @@ p {
 
 .wrapper {
   margin-top: 3em;
-  height:auto;
+  height:1500px;
   width: 100%;
-
-
+  overflow: hidden;
 }
 
+//Projekt////////////////////////////
 .half-site {
-  //display: inline-block;
-  /*
-  height: 140vw;
-  width:70vw;  */
-
   height: 160vw;
   width: 160vw;
   border-left:1rem solid black;
   z-index: 10000;
-  //overflow-x: hidden;
+
   @include transition(all 1s ease);
   & h1{
     cursor: pointer;
@@ -68,6 +67,10 @@ p {
     font-size: 3em;
     left:2px;
     margin:0 0 0 2rem;
+    @include transition(all 0.5s ease);
+    &:hover {
+      color:#b6fbff;
+    }
     @include breakpoint(small){
       margin:0;
       font-size: 1.6em;
@@ -180,7 +183,6 @@ p {
 }
 
 .icons {
-
   width: 100%;
   @include flexbox();
   @include flex-direction(row);
@@ -191,7 +193,6 @@ p {
   & img {
     height: 4rem;
     margin-right: 1rem;
-
   }
 }
 .projekt {
@@ -210,7 +211,7 @@ p {
   }
   @include breakpoint(medium){
     & h2 {
-      font-size: 4rem;
+      font-size: 3.5rem;
       margin: 0.2em 0 0.5em 0;
       padding:0;
     }

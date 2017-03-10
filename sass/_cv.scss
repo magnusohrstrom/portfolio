@@ -4,6 +4,7 @@
   width: 30em;
   padding:1em;
   background:black;
+  word-wrap: break-word;
 
   & h3,p,a {
     color:white;
@@ -18,6 +19,11 @@
     font-weight: 400;
     font-style: italic;
   }
+  @include breakpoint(small){
+    padding:0 1em 0 0;
+    width: 100%;
+  };
+
 }
 
 .cv-h2{
@@ -38,9 +44,17 @@
     font-size:2em;
     background: black;
     color:red;
+    width: 90%;
+    @include breakpoint(small){
+      font-size: 1.5em;
+    };
   }
   & p {
+    width: 90%;
     font-size:1.2rem;
+    @include breakpoint(small){
+      font-size: 1.1em;
+    };
   }
 
 }
@@ -49,5 +63,13 @@
   @include flex-direction(row);
   @include breakpoint(large){
     @include flex-direction(column);
+  };
+}
+
+#portrait {
+  background:black;
+  padding:1em;
+  @include breakpoint(small){
+    width: 100vw;
   };
 }
