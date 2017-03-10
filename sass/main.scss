@@ -4,11 +4,11 @@
 @import 'cv';
 
 html,body {
-  max-width: 100vw;
-
+  //max-width: 100vw;
+  overflow-x: hidden;
 }
 body{
-  overflow-x: hidden;
+
   //position: relative;
   margin:0;
   width: 100%;
@@ -45,16 +45,22 @@ p {
 
 .wrapper {
   margin-top: 3em;
-  height:10vh;
+  height:100vh;
   width: 100%;
-  //overflow-x: hidden;
+
+
 }
 
 .half-site {
+  //display: inline-block;
+  /*
   height: 140vw;
-  width:70vw;
+  width:70vw;  */
+
+  height: 160vw;
+  width: 160vw;
   border-left:1rem solid black;
-  z-index: 1;
+  z-index: 10000;
   //overflow-x: hidden;
   @include transition(all 1s ease);
   & h1{
@@ -86,24 +92,24 @@ p {
 
 .dev-section {
   background: $yellow; /* fallback for old browsers */
-  //@include transform(rotate(45deg) translate(5%,30%));
-  @include transform(rotate(45deg) translate(-5%, 12%));
+  @include transform(rotate(45deg) translate(5%,30%));
+  //@include transform(rotate(45deg) translate(-5%, 12%));
 }
 
 .art-section {
   background: $purple;
-  //@include transform(rotate(45deg) translate(-60%, -33%));
-  @include transform(rotate(45deg) translate(-134%, -51%));
+  @include transform(rotate(45deg) translate(-60%, -33%));
+  //@include transform(rotate(45deg) translate(-134%, -51%));
 
 }
 .cv-section {
   background: red;
-    //@include transform(rotate(45deg) translate(-125%, -96%));
-    @include transform(rotate(45deg) translate(-264%, -114%));
+    @include transform(rotate(45deg) translate(-125%, -96%));
+    //@include transform(rotate(45deg) translate(-264%, -114%));
 }
 
 .triangle-span {
-  position: static;
+  //overflow-x: hidden;
   @include flexbox();
   @include justify-content(flex-start);
   @include align-items(center);
@@ -120,6 +126,7 @@ p {
 }
 
 .triangle-container {
+
   display:none;
   overflow-x: hidden;
   &.active{
@@ -135,7 +142,7 @@ p {
 }
 
 .triangle-content {
-  //overflow-x: hidden;
+
   margin:0 6rem 0 6rem;
   width: 70%;
   height: 100vh;
@@ -148,6 +155,7 @@ p {
 }
 
 .icons {
+
   width: 100%;
   @include flexbox();
   @include flex-direction(row);
@@ -162,7 +170,7 @@ p {
   }
 }
 .projekt {
-  //overflow-x: hidden;
+
   @include flexbox();
   @include flex-direction(column);
   @include justify-content(flex-start);
@@ -172,7 +180,8 @@ p {
 
   & h2 {
     font-style: italic;
-    font-size: 5rem;
+    font-size: 6rem;
+    //margin: 2rem;
   }
   @include breakpoint(medium){
     //@include align-items(center);
@@ -193,6 +202,7 @@ p {
 
 }
 .projekt-figure {
+
   margin: 0 2em 14em 0;
   height: 20em;
   width: 25em;
@@ -224,6 +234,7 @@ p {
 
 }
 #gees {
+
   position: fixed;
   top:6em;
   right:4em;
