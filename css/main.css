@@ -401,7 +401,7 @@ p {
 
 .triangle-content {
   margin: 0 6rem 0 6rem;
-  width: 70%;
+  width: 65%;
   height: 100vh; }
   @media (max-width: 1300px) {
     .triangle-content {
@@ -518,29 +518,50 @@ p {
       .projekt-figure a {
         font-size: 2.2em; } }
   .projekt-figure img {
-    -webkit-transform: translate(10%, 0%);
-    -moz-transform: translate(10%, 0%);
-    -ms-transform: translate(10%, 0%);
-    -o-transform: translate(10%, 0%);
-    transform: translate(10%, 0%);
+    -webkit-transform: translate(20%, 0%);
+    -moz-transform: translate(20%, 0%);
+    -ms-transform: translate(20%, 0%);
+    -o-transform: translate(20%, 0%);
+    transform: translate(20%, 0%);
     height: 100%;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 100; }
     .projekt-figure img.active {
-      width: 30rem;
       height: auto;
+      width: 25rem;
+      z-index: 11000;
       -webkit-transition: all 1s ease;
       -moz-transition: all 1s ease;
       -ms-transition: all 1s ease;
       -o-transition: all 1s ease;
-      transition: all 1s ease; }
+      transition: all 1s ease;
+      -webkit-transform: translate(-10%, 0);
+      -moz-transform: translate(-10%, 0);
+      -ms-transform: translate(-10%, 0);
+      -o-transform: translate(-10%, 0);
+      transform: translate(-10%, 0); }
+      @media (max-width: 464px) {
+        .projekt-figure img.active {
+          width: 101%;
+          height: auto;
+          -webkit-transform: translate(-2%, 0);
+          -moz-transform: translate(-2%, 0);
+          -ms-transform: translate(-2%, 0);
+          -o-transform: translate(-2%, 0);
+          transform: translate(-2%, 0); } }
     @media (max-width: 464px) {
       .projekt-figure img {
-        height: 83%; } }
+        height: 83%;
+        -webkit-transform: translate(-10, -10%);
+        -moz-transform: translate(-10, -10%);
+        -ms-transform: translate(-10, -10%);
+        -o-transform: translate(-10, -10%);
+        transform: translate(-10, -10%); } }
   @media (max-width: 1100px) {
     .projekt-figure {
       height: 15em;
@@ -555,6 +576,48 @@ p {
         margin: 0.2em 0 0 0.2em; }
       .projekt-figure p {
         font-size: 1.22em; } }
+
+img.icon {
+  height: 5em;
+  z-index: 100; }
+  @media (max-width: 464px) {
+    img.icon {
+      height: 4em; } }
+
+.icon-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  height: 70%;
+  width: 100%;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0); }
+  @media (max-width: 464px) {
+    .icon-box {
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
+      transform: translate(0, 0);
+      width: 90%; } }
 
 #gees {
   position: fixed;

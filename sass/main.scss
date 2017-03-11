@@ -166,7 +166,7 @@ p {
 .triangle-content {
 
   margin:0 6rem 0 6rem;
-  width: 70%;
+  width: 65%;
   height: 100vh;
 
   @include breakpoint(xlarge){
@@ -254,18 +254,27 @@ p {
     };
   }
   & img {
-    @include transform(translate(10%,0%));
+    @include transform(translate(20%,0%));
     height: 100%;
     @include transition(all 1s ease);
     cursor: pointer;
+    z-index:100;
     &.active {
-      width: 30rem;
       height: auto;
+      width: 25rem;
+      z-index:11000;
       @include transition(all 1s ease);
+      @include transform(translate(-10%,0));
+      @include breakpoint(small){
+        width: 101%;
+        height: auto;
+        @include transform(translate(-2%,0));
+      };
     }
 
     @include breakpoint(small){
       height: 83%;
+      @include transform(translate(-10,-10%));
     };
   }
 
@@ -287,6 +296,37 @@ p {
   };
 }
 
+img.icon {
+  height: 5em;
+  z-index:100;
+  @include breakpoint(small) {
+    height: 4em;
+  };
+
+}
+
+.icon-box {
+
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  @include align-items(center);
+  height: 70%;
+  width: 100%;
+  @include transform(translate(0,0));
+  @include breakpoint(small){
+    @include transform(translate(0,0));
+    width: 90%;
+  };
+  & img {
+    //height: 5rem;
+    &.active{
+      //height: 20rem;
+
+    }
+  }
+
+}
 .cartoon {
 
 
