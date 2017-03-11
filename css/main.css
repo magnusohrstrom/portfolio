@@ -40,7 +40,9 @@ header {
       height: 2.2rem; } }
 
 nav img {
-  height: 1.5em; }
+  height: 1.2em;
+  z-index: 4000;
+  margin: 0.2em 1em 0 1em; }
 
 .container-header {
   width: 100%;
@@ -106,9 +108,11 @@ nav img {
       display: none; } }
 
 .footer {
-  position: absolute;
-  bottom: 1em;
-  right: 5em; }
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 2rem;
+  background: white; }
 
 .cv-figure {
   margin: 0 1em 1em 0;
@@ -193,7 +197,7 @@ nav img {
 
 html, body {
   overflow-x: hidden;
-  height: 1000px; }
+  height: 2100px; }
 
 body {
   margin: 0;
@@ -238,15 +242,15 @@ p {
 
 .wrapper {
   margin-top: 3em;
-  height: 1000px;
+  height: 100%;
   width: 100%;
-  overflow: visible; }
+  overflow-y: hidden; }
 
 .half-site {
   height: 160vw;
   width: 160vw;
   border-left: 1rem solid black;
-  z-index: 10000;
+  z-index: 1000;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -ms-transition: all 1s ease;
@@ -279,7 +283,7 @@ p {
     position: absolute;
     top: 2rem;
     height: auto;
-    z-index: 2000;
+    z-index: 5000;
     width: 100%; }
     .half-site.active h1 {
       margin: 1rem; }
@@ -506,6 +510,7 @@ p {
   height: 20em;
   width: 25em;
   padding: 1em;
+  z-index: 500;
   background: black; }
   .projekt-figure h3, .projekt-figure p, .projekt-figure a {
     color: #FFFF82; }
@@ -518,42 +523,27 @@ p {
       .projekt-figure a {
         font-size: 2.2em; } }
   .projekt-figure img {
-    -webkit-transform: translate(20%, 0%);
-    -moz-transform: translate(20%, 0%);
-    -ms-transform: translate(20%, 0%);
-    -o-transform: translate(20%, 0%);
-    transform: translate(20%, 0%);
-    height: 100%;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+    margin: 1em 0 0 1em;
+    width: 30%;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
     z-index: 100; }
     .projekt-figure img.active {
-      height: auto;
-      width: 25rem;
+      width: 100%;
       z-index: 1000;
-      -webkit-transition: all 1s ease;
-      -moz-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-      -o-transition: all 1s ease;
-      transition: all 1s ease;
-      -webkit-transform: translate(-10%, 0);
-      -moz-transform: translate(-10%, 0);
-      -ms-transform: translate(-10%, 0);
-      -o-transform: translate(-10%, 0);
-      transform: translate(-10%, 0); }
+      z-index: 1000;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
       @media (max-width: 464px) {
         .projekt-figure img.active {
-          width: 101%;
-          height: auto;
-          -webkit-transform: translate(-2%, 0);
-          -moz-transform: translate(-2%, 0);
-          -ms-transform: translate(-2%, 0);
-          -o-transform: translate(-2%, 0);
-          transform: translate(-2%, 0); } }
+          width: 101%; } }
     @media (max-width: 464px) {
       .projekt-figure img {
         height: 83%;

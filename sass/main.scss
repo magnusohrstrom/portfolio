@@ -5,7 +5,7 @@
 
 html,body {
   overflow-x: hidden;
-  height: 1000px;
+  height: 2100px;
 }
 body{
   //height: 1700px;
@@ -48,9 +48,9 @@ p {
 
 .wrapper {
   margin-top: 3em;
-  height: 1000px;
+  height: 100%;
   width: 100%;
-  overflow: visible;
+  overflow-y:hidden;
 
 }
 
@@ -59,7 +59,7 @@ p {
   height: 160vw;
   width: 160vw;
   border-left:1rem solid black;
-  z-index: 10000;
+  z-index: 1000;
 
   @include transition(all 1s ease);
   & h1{
@@ -84,7 +84,7 @@ p {
     position:absolute;
     top:2rem;
     height: auto;
-    z-index: 2000;
+    z-index: 5000;
     width: 100%;
     & h1 {
       margin:1rem;
@@ -240,7 +240,7 @@ p {
   height: 20em;
   width: 25em;
   padding:1em;
-
+  z-index: 500;
   background: black;
   & h3,p,a {color:$yellow;}
   & a {
@@ -253,21 +253,23 @@ p {
     };
   }
   & img {
-    @include transform(translate(20%,0%));
-    height: 100%;
-    @include transition(all 1s ease);
+    //@include transform(translate(20%,0%));
+    margin:1em 0 0 1em;
+    width: 30%;
+    @include transition(all 0.3s ease);
     cursor: pointer;
     z-index:100;
     &.active {
-      height: auto;
-      width: 25rem;
+      width: 100%;
+      z-index: 1000;
+      //width: 25rem;
       z-index:1000;
-      @include transition(all 1s ease);
-      @include transform(translate(-10%,0));
+      @include transition(all 0.3s ease);
+      //@include transform(translate(-10%,0));
       @include breakpoint(small){
         width: 101%;
-        height: auto;
-        @include transform(translate(-2%,0));
+
+        //@include transform(translate(-2%,0));
       };
     }
 
