@@ -260,7 +260,7 @@ p {
     &.active {
       height: auto;
       width: 25rem;
-      z-index:11000;
+      z-index:1000;
       @include transition(all 1s ease);
       @include transform(translate(-10%,0));
       @include breakpoint(small){
