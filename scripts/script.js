@@ -10,7 +10,7 @@ function openNav(){
 }
 
 function toggleActiveImg(){
-  
+
   this.classList.toggle('active');
 };
 
@@ -21,7 +21,8 @@ for (let i = 0; i < images.length; i++) {
 
 
 
-function toggleActive() {
+function toggleActive(e) {
+  e.preventDefault();
   var elem = document.getElementsByClassName('half-site');
   var kids = this.parentNode.parentNode.children;
   var removeKids;
@@ -46,5 +47,6 @@ function toggleActive() {
 
 var halfsiteH1 = document.getElementsByClassName('half-site-h1');
 for (var i = 0; i < halfsiteH1.length; i++) {
-  halfsiteH1[i].addEventListener('click',toggleActive);
+  halfsiteH1[i].addEventListener('click',
+    toggleActive);
 }
