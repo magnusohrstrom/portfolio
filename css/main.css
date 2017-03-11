@@ -192,7 +192,8 @@ nav img {
       margin: 0; } }
 
 html, body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  height: 1000px; }
 
 body {
   margin: 0;
@@ -237,9 +238,9 @@ p {
 
 .wrapper {
   margin-top: 3em;
-  height: 1700px;
+  height: 1000px;
   width: 100%;
-  overflow: hidden; }
+  overflow: visible; }
 
 .half-site {
   height: 160vw;
@@ -279,7 +280,6 @@ p {
     top: 2rem;
     height: auto;
     z-index: 2000;
-    margin-bottom: 60em;
     width: 100%; }
     .half-site.active h1 {
       margin: 1rem; }

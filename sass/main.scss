@@ -4,10 +4,11 @@
 @import 'cv';
 
 html,body {
-  //height: auto;
   overflow-x: hidden;
+  height: 1000px;
 }
 body{
+  //height: 1700px;
   margin:0;
   width: 100%;
   padding:0;
@@ -47,9 +48,10 @@ p {
 
 .wrapper {
   margin-top: 3em;
-  height:1700px;
+  height: 1000px;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
+
 }
 
 //Projekt////////////////////////////
@@ -83,7 +85,6 @@ p {
     top:2rem;
     height: auto;
     z-index: 2000;
-    margin-bottom: 60em;
     width: 100%;
     & h1 {
       margin:1rem;
