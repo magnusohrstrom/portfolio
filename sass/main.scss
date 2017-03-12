@@ -9,7 +9,7 @@ html,body {
 
 }
 body{
-    height: 2100px;
+  height: 1900px;
   margin:0;
   width: 100%;
   padding:0;
@@ -128,7 +128,6 @@ p {
 }
 
 .triangle-span {
-  //overflow-x: hidden;
   @include flexbox();
   @include justify-content(flex-start);
   @include align-items(center);
@@ -206,7 +205,7 @@ p {
 
   @include flexbox();
   @include flex-direction(column);
-  @include justify-content(flex-start);
+  @include justify-content(center);
   @include align-items(flex-start);
   height: auto;
   width: 100%;
@@ -214,7 +213,7 @@ p {
   & h2 {
     font-style: italic;
     font-size: 6rem;
-    margin-bottom: 0.3em;
+    margin: 0.3em 0 0.3em 0;
 
 
   }
@@ -232,7 +231,7 @@ p {
   margin:0;
   @include flexbox();
   @include flex-direction(row);
-  @include justify-content(flex-start);
+  @include justify-content(space-between);
   @include align-items(flex-start);
   flex-wrap: wrap;
   @include breakpoint(medium){
@@ -263,7 +262,6 @@ p {
   }
   & img {
     height: 100%;
-    //width: 100%;
     @include transition(all 0.3s ease);
     cursor: pointer;
     z-index:100;
