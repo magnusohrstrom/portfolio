@@ -1,0 +1,45 @@
+.projekt-figure.art-figure {
+  background: black;
+  margin:0 3em 10em 0;
+
+  & a,p,h3 {
+    color:white;
+  }
+
+  &.active{
+
+  }
+  & img {
+    @include transition(all 0.4s ease);
+    position: absolute;
+    width: 95%;
+    border:0.5em solid black;
+    &:hover{
+      //width: 100%;
+    }
+    &.active{
+        @include transition(all 0.4s ease);
+      width: 170%;
+      margin:0;
+    }
+
+  }
+  &.standing {
+
+    margin-bottom: 15em;
+    & img {
+      width:70%;
+      &:hover{
+        width: 75%;
+      }
+      &.active{
+        width: 120%;
+      }
+     }
+  }
+}
+.overlay-img{
+  width:95%;
+  height: auto;
+  background:yellow;
+}

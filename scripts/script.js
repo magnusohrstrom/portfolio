@@ -10,9 +10,9 @@ function openNav(){
 }
 
 function toggleActiveImg(){
-
   this.classList.toggle('active');
-};
+  
+}
 
 var images = document.getElementsByClassName('figure-img');
 for (let i = 0; i < images.length; i++) {
