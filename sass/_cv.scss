@@ -5,13 +5,16 @@
   padding:1em;
   background:black;
   word-wrap: break-word;
+  letter-spacing: 1em;
+
 
   & h3,p,a {
     color:white;
     margin-top: 0.3em;
+
   }
   & p {
-    margin-top: 0;
+    margin: 0 4em 1em 0;
   }
   & a {
     margin-top: 2rem;
@@ -20,9 +23,15 @@
     font-style: italic;
   }
   @include breakpoint(small){
-    padding:0 1em 0 0;
-    padding-top: 1em;
-    width: 100%;
+    padding:1em 1em 0 0;
+    margin-right: 1em;
+    width: 95%;
+  };
+
+  @include breakpoint(large){
+    width: 95%;
+    //padding:1em 1em 1em 1em;
+    margin:0 1em 1em 0;
   };
 
 }
@@ -69,10 +78,21 @@
 
 #portrait {
   background:black;
-
+  @include breakpoint(large){
+   width: 50%;
+   //border:0 1em 0 0 solid black;
+  };
   @include breakpoint(small){
     width: 100vw;
     padding:1em 1em 0 0;
     margin:0;
   };
+}
+
+.cv-cirkle {
+  height: 6em;
+  width: 6em;
+  margin-left: 35%;
+  border-radius: 100%;
+  background: black;
 }

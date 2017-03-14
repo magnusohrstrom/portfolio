@@ -3,6 +3,7 @@
 @import 'nav';
 @import 'cv';
 @import "art";
+@import "animations";
 
 html,body {
   overflow-x: hidden;
@@ -19,6 +20,11 @@ body{
   background-repeat:  repeat-y;
   z-index: 0;
   overflow: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  @include breakpoint(small){
+    height: 850px;
+  };
 }
 //Typogrphy
 a {
@@ -33,6 +39,10 @@ a {
 h1 {
   margin:0;
 }
+a,h1,h2,h3,p {
+  letter-spacing: 0.1em;
+}
+
 a,h1,,h2,h3,p,.art-h1{
   color:black;
   font-family: $art-font;
@@ -50,7 +60,7 @@ p {
 
 .wrapper {
   margin-top: 3em;
-  height: auto;
+  height: 100%;
   width: 100%;
   overflow:hidden;
 
@@ -69,9 +79,10 @@ p {
     cursor: pointer;
     width: auto;
     color:white;
-    font-size: 3em;
+    font-size: 2em;
+    font-weight: 800;
     left:2px;
-    margin:0 0 0 2rem;
+    margin:0 0 0 1rem;
     @include transition(all 0.5s ease);
     &:hover {
       color:grey;
@@ -83,7 +94,7 @@ p {
 
   }
   &.active {
-    @include transition(all 1s ease);
+    @include transition(all 0.5s ease);
     @include transform(translate(0,0));
     position:fixed;
     top:2rem;
@@ -98,15 +109,17 @@ p {
     }
   }
 
+  &.hidden {
+    display: none;
+  }
 }
 
 .dev-section {
   background: $yellow; /* fallback for old browsers */
-
   @include transform(rotate(45deg) translate(5%,30%));
   //@include transform(rotate(45deg) translate(24%, 22%));
   @include breakpoint(medium){
-    @include transform(rotate(45deg) translate(6%,38%));
+  @include transform(rotate(45deg) translate(6%,38%));
   };
 }
 
@@ -116,18 +129,18 @@ p {
   @include transform(rotate(45deg) translate(-60%, -33%));
   //@include transform(rotate(45deg) translate(-134%, -51%));
   @include breakpoint(medium){
-    @include transform(rotate(45deg) translate(-50%,-18%));
+  @include transform(rotate(45deg) translate(-50%,-18%));
   };
 
 }
 .cv-section {
-    z-index: 1056;
+  z-index: 1056;
   background: red;
-    @include transform(rotate(45deg) translate(-125%, -96%));
-    //@include transform(rotate(45deg) translate(-264%, -114%));
-    @include breakpoint(medium){
-      @include transform(rotate(45deg) translate(-106%,-73%));
-    };
+  @include transform(rotate(45deg) translate(-125%, -96%));
+  //@include transform(rotate(45deg) translate(-264%, -114%));
+  @include breakpoint(medium){
+  @include transform(rotate(45deg) translate(-106%,-73%));
+  };
 }
 
 .triangle-span {
@@ -137,7 +150,7 @@ p {
   background:black;
   @include transition(all 1s ease);
 
-  height: 5rem;
+  height: 3rem;
   @include breakpoint(small){
   height: 3rem;
   };
@@ -172,10 +185,10 @@ p {
 
 .triangle-content {
   opacity: 0;
-  animation-delay:0.9s;
+  animation-delay:0.6s;
   @include animation(fade, 1.8s, forwards, 1);
   margin:0 6rem 0 6rem;
-  width: 80%;
+  width: 70%;
   height: 100vh;
 
   @include breakpoint(xlarge){
@@ -235,8 +248,8 @@ p {
   margin:0;
   @include flexbox();
   @include flex-direction(row);
-  @include justify-content(space-between);
-  @include align-items(flex-start);
+  @include justify-content(flex-grow);
+  @include align-items(center);
   flex-wrap: wrap;
   @include breakpoint(medium){
     @include justify-content(flex-start);
@@ -296,6 +309,10 @@ p {
   @include breakpoint(large){
     height: 15em;
     width: 20em;
+  };
+  @include breakpoint(medium){
+    height: 15em;
+    width: 100%;
   };
   @include breakpoint(small){
     width:90%;
@@ -360,330 +377,9 @@ img.icon {
 
 }
 
-.plane {
-  left:-40%;
-  z-index: 1010;
+.back-button {
+  height: 2em;
   position:absolute;
-  height: 5em;
-  @include animation(plane, 7s, forwards, 1);
-  animation-timing-function:  ease;
-  animation-delay: 9s;
-}
-
-.cloud-container {
-  @include flexbox();
-  @include align-items(flex-end);
-  position: fixed;
-  bottom:0%;
-  left:0;
-  height:auto;
-  width: 100vw;
-
-}
-
-.cloud {
-  float:left;
-  border-radius: 100%;
-  width: 10em;
-  height: 10em;
-  margin-left: -3em;
-  background: white;
-  &:first-child {
-    height: 8em;
-    width: 8em;
-  }
-  &:nth-child(odd){
-    height: 9em;
-    width: 9em;
-  }
-  &:last-child {
-    margin:0 -3em 0 -3em;
-    height: 12em;
-    width: 12em;
-  }
-}
-
-.hat {
-  right: -100%;
-  height: 6em;
-  position: fixed;
-  @include animation(hat,3s,forwards,1);
-  animation-timing-function: linear;
-  animation-delay: 18s;
-}
-
-.leaf1 {
-  right:-10%;
-  top:30%;
-  height: 2em;
-  position: fixed;
-  @include animation(leaf1,3s,forwards,infinite);
-  animation-timing-function: linear;
-  animation-delay:1s;
-  z-index: 1000;
-  @include transition(all 1s ease);
-  &:hover {
-    height: 4em;
-  }
-}
-
-.leaf1.leaf12{
-  @include animation(leaf12,3s,forwards, 1);
-  height: 3em;
-  animation-delay:2s;
-  z-index: 1050;
-}
-.leaf1.leaf13 {
-  @include animation(leaf13,3s,forwards, infinite);
-  animation-timing-function: linear;
-  height: 2em;
-  animation-delay:6s;
-}
-
-.elephant {
-  height: 8em;
-  position: fixed;
-  @include animation(elephant,12s,forwads,1);
-  right: -50%;
-  animation-timing-function: ease-in;
-  animation-delay: 70s;
-  @include transition(all 1s ease);
-}
-
-.ballon {
-  height: 18em;
-  position: fixed;
-  @include animation(ballon,80s,forwads,1);
-  right: -50%;
-  animation-timing-function: linear;
-  @include transition(all 0.5s ease);
-  animation-delay: 18s;
-  @include transform(rotate(-5deg));
-  &:hover {
-    height: 5.5em;
-  }
-}
-
-.ufo {
-  height: 15em;
-  position: fixed;
-  right: -100%;
-  @include animation(ufo,5s,forwards,1);
-  animation-delay: 100s;
-}
-
-.brown {
-  height: 2em;
-  position: fixed;
-  right: -100%;
-  @include animation(leafbrown,3s,forwards,infinite);
-  animation-timing-function: linear;
-  animation-delay: 10s;
-
-}
-
-.et {
-  height: 9em;
-  right:-80%;
-
-  position:fixed;
-
-  @include animation(et, 7s, forwards, 1);
-  animation-timing-function:  ease-in;
-  animation-delay: 60s;
-}
-
-#gees {
-
-  position: fixed;
-  top:6em;
-  right:4em;
-  height: 15em;
-}
-
-@include keyframe(et){
-  0% {
-    bottom:90%;
-    right:-40%;
-
-  }
-
-
-  100% {
-    bottom:30%;
-    right:120%;
-    @include transform(rotate(-1660deg));
-  }
-};
-
-@include keyframe(leafbrown){
-  0% {
-    bottom:50%;
-    right:-30%;
-
-  }
-  100% {
-    bottom:30%;
-    right:120%;
-    @include transform(rotate(-660deg));
-  }
-};
-
-@include keyframe(ufo) {
-  0% {
-    bottom:10%;
-    right:-30%;
-    @include transform(rotate(10deg));
-  }
-  30% {
-    bottom:5%;
-    right:10%;
-    @include transform(rotate(-10deg));
-  }
-  60% {
-    bottom:10%;
-    right:-5%;
-    @include transform(rotate(10deg));
-  }
-  100% {
-    bottom:5%;
-    right:140%;
-    @include transform(rotate(-10deg));
-  }
-
-};
-
-@include keyframe(ballon){
-  0% {
-    bottom:60%;
-    right:-30%;
-  }
-  100% {
-    bottom:80%;
-    right:110%;
-  }
-};
-
-@include keyframe(leaf13) {
-  0% {
-    top:90%;
-    right:-10%;
-  }
-  50% {
-    top:70%;
-    right:50%;
-    @include transform(rotate(500deg));
-  }
-  100% {
-    top:40%;
-    right:110%;
-    @include transform(rotate(1000deg));
-  }
-};
-
-
-@include keyframe(elephant){
-  0% {
-    top:30%;
-    right:-20%;
-
-  }
-  100% {
-    top:10%;
-    right:120%;
-    @include transform(rotate(-2000deg));
-  }
-};
-
-@include keyframe(plane){
-  0% {
-    top:40%;
-    left:100%;
-    @include transform(rotate(50deg));
-  }
-
-  30% {
-    top:10%;
-    left:30%;
-    @include transform(rotate(100deg));
-  }
-
-  /*
-  60%{
-    top:60%;
-    left:50%;
-    @include transform(rotate(-2180deg));
-  }
-
-  80%{
-    top:35%;
-    left:60%;
-    @include transform(rotate(-2180deg));
-  }  */
-
-
-
-  100% {
-    top:110%;
-    left:-40%;
-    @include transform(rotate(-200deg));
-  }
-};
-
-@include keyframe(hat) {
-  0% {
-    top:70%;
-    right:-10%;
-
-  }
-  100% {
-    top:10%;
-    right:110%;
-    @include transform(rotate(-1000deg));
-  }
-};
-
-@include keyframe(leaf1) {
-  0% {
-    top:60%;
-    right:-10%;
-  }
-  100% {
-    top:10%;
-    right:110%;
-    @include transform(rotate(-1000deg));
-  }
-};
-
-@include keyframe(leaf12) {
-  0% {
-    top:20%;
-    right:-10%;
-  }
-  100% {
-    top:70%;
-    right:110%;
-    @include transform(rotate(-1500deg));
-  }
-
-};
-
-//animation for about.
-@include keyframe (fade) {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@include keyframe (fade-out) {
-  from {
-    opacity: 1;
-    display: flex;
-  }
-  to {
-    opacity: 0;
-    display:none;
-  }
+  right: 5%;
+  top:2%;
 }

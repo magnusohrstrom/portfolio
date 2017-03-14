@@ -10,15 +10,24 @@ header{
   @include flex-direction(row);
   @include justify-content(center);
   @include align-content(center);
+  @include transition(all 0.3s ease);
   & a {
 
     font-size: 1.3em;
     font-family:$art-font;
     color:white;
   }
+
+  & a,img {
+    &:hover{
+      @include transition(all 0.3s ease);
+      color:grey;
+    }
+  }
   @include breakpoint(medium){
   height: 2.2rem;
-  };
+  }
+
 }
 nav{
   & img {
@@ -58,21 +67,25 @@ nav{
 #title {
   font-size: 1.3em;
   margin-left: 2rem;
+
   @include breakpoint(medium){
     margin-left: 1.2rem;
     font-size: 1.2em;
   };
+  @include breakpoint(xsmall){
+    margin:0 0 0 0.5em;
+  };
 }
 
-#header-nav {
+.header-nav {
   @include flexbox();
 
   @include justify-content(flex-end);
   @include align-items(center);
-  margin-right:6rem;
+  margin-right:2%;
 
   width: 40%;
-  @include breakpoint(medium){
+  @include breakpoint(smedium){
   display: none;
   };
 }
@@ -81,11 +94,32 @@ nav{
 
 }
 .footer {
+  display: none;
+  @include align-items(center);
+  flex-direction: row;
+  @include justify-content(space-around);
   position: fixed;
   width:100%;
   bottom:0;
   height: 2rem;
-  background: white;
+  background: black;
+  z-index: 4000;
   & img {
+    z-index: 5000;
+    height: 1.5em;
+    margin-top: 0.2em;
   }
+  @include breakpoint(smedium){
+    @include flexbox();
+  };
+}
+.footer-nav {
+
+  height:auto;
+  width: 100%;
+
+  & img {
+  z-index: 5000;
+  height: 3em;
+  };
 }
