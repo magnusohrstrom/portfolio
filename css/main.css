@@ -533,7 +533,7 @@ nav img {
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  animation-delay: 3s;
+  animation-delay: 0s;
   -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
   -ms-transform: rotate(-5deg);
@@ -1796,7 +1796,7 @@ p {
   margin: 0 6rem 0 6rem;
   width: 70%;
   height: 100vh; }
-  @media (max-width: 1300px) {
+  @media (max-width: 1500px) {
     .triangle-content {
       width: 90%; } }
   @media (max-width: 464px) {
@@ -1846,10 +1846,10 @@ p {
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  -webkit-align-items: flex-start;
-  -moz-align-items: flex-start;
-  -ms-align-items: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: space-between;
+  -moz-align-items: space-between;
+  -ms-align-items: space-between;
+  align-items: space-between;
   height: auto;
   width: 100%; }
   .projekt h2 {

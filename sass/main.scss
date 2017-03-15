@@ -191,7 +191,8 @@ p {
   width: 70%;
   height: 100vh;
 
-  @include breakpoint(xlarge){
+
+  @include breakpoint(xxlarge){
     width:90%;
   };
   @include breakpoint(small){
@@ -222,7 +223,7 @@ p {
   @include flexbox();
   @include flex-direction(column);
   @include justify-content(center);
-  @include align-items(flex-start);
+  @include align-items(space-between);
   height: auto;
   width: 100%;
 

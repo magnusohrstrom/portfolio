@@ -96,7 +96,7 @@
   right: -80%;
   animation-timing-function: linear;
   @include transition(all 0.5s ease);
-  animation-delay: 3s;
+  animation-delay: 0s;
   @include transform(rotate(-5deg));
   @include breakpoint(xsmall){
     height:10em;
