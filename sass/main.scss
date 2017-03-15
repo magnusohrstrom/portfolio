@@ -56,6 +56,12 @@ h3{
 }
 p {
   font-size: 1.5rem;
+  word-wrap: break-word;
+  @include breakpoint(small){
+    font-size: 1.2rem;
+
+  };
+
 }
 
 .wrapper {
@@ -229,7 +235,7 @@ p {
 
   & h2 {
     font-style: italic;
-    font-size: 6rem;
+    font-size: 5rem;
     margin: 0.3em 0 0.3em 0;
 
     @include breakpoint(medium){
@@ -383,4 +389,11 @@ img.icon {
   position:absolute;
   right: 5%;
   top:2%;
+}
+
+.projekt-span {
+  width: 70%;
+  @include breakpoint(small){
+    width: 90%;
+  };
 }

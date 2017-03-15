@@ -108,6 +108,9 @@ nav{
     z-index: 5000;
     height: 1.5em;
     margin-top: 0.2em;
+    &:last-child {
+      height: 1.7em;
+    }
   }
   @include breakpoint(smedium){
     @include flexbox();
@@ -122,4 +125,10 @@ nav{
   z-index: 5000;
   height: 3em;
   };
+}
+
+.mail {
+  margin-top: 0.4em;
+  height: 1.5em;
+  width: 1.3em;
 }

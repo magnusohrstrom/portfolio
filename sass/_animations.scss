@@ -48,7 +48,7 @@
   position: fixed;
   @include animation(hat,3s,forwards,1);
   animation-timing-function: linear;
-  animation-delay: 18s;
+  animation-delay: 15s;
 }
 
 .leaf1 {
@@ -275,7 +275,7 @@
 
 @include keyframe(hat) {
   0% {
-    top:70%;
+    top:40%;
     right:-10%;
 
   }

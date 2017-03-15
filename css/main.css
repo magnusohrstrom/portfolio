@@ -144,6 +144,8 @@ nav img {
     z-index: 5000;
     height: 1.5em;
     margin-top: 0.2em; }
+    .footer img:last-child {
+      height: 1.7em; }
   @media (max-width: 560px) {
     .footer {
       display: -webkit-box;
@@ -158,6 +160,11 @@ nav img {
   .footer-nav img {
     z-index: 5000;
     height: 3em; }
+
+.mail {
+  margin-top: 0.4em;
+  height: 1.5em;
+  width: 1.3em; }
 
 .cv-figure {
   margin: 0 1em 1em 0;
@@ -269,6 +276,9 @@ nav img {
     height: 80%;
     position: absolute;
     border: 0.5em solid black; }
+    @media (max-width: 464px) {
+      .projekt-figure.art-figure img {
+        margin-left: -0.5em; } }
     .projekt-figure.art-figure img.active {
       -webkit-transition: all 0.4s ease;
       -moz-transition: all 0.4s ease;
@@ -378,7 +388,7 @@ nav img {
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-timing-function: linear;
-  animation-delay: 18s; }
+  animation-delay: 15s; }
 
 .leaf1 {
   right: -30%;
@@ -1304,7 +1314,7 @@ nav img {
     transform: rotate(-200deg); } }
 @-webkit-keyframes hat {
   0% {
-    top: 70%;
+    top: 40%;
     right: -10%; }
   100% {
     top: 10%;
@@ -1316,7 +1326,7 @@ nav img {
     transform: rotate(-1000deg); } }
 @-moz-keyframes hat {
   0% {
-    top: 70%;
+    top: 40%;
     right: -10%; }
   100% {
     top: 10%;
@@ -1328,7 +1338,7 @@ nav img {
     transform: rotate(-1000deg); } }
 @-ms-keyframes hat {
   0% {
-    top: 70%;
+    top: 40%;
     right: -10%; }
   100% {
     top: 10%;
@@ -1340,7 +1350,7 @@ nav img {
     transform: rotate(-1000deg); } }
 @-o-keyframes hat {
   0% {
-    top: 70%;
+    top: 40%;
     right: -10%; }
   100% {
     top: 10%;
@@ -1352,7 +1362,7 @@ nav img {
     transform: rotate(-1000deg); } }
 @keyframes hat {
   0% {
-    top: 70%;
+    top: 40%;
     right: -10%; }
   100% {
     top: 10%;
@@ -1593,7 +1603,11 @@ h3 {
   font-style: italic; }
 
 p {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  word-wrap: break-word; }
+  @media (max-width: 464px) {
+    p {
+      font-size: 1.2rem; } }
 
 .wrapper {
   margin-top: 3em;
@@ -1854,7 +1868,7 @@ p {
   width: 100%; }
   .projekt h2 {
     font-style: italic;
-    font-size: 6rem;
+    font-size: 5rem;
     margin: 0.3em 0 0.3em 0; }
     @media (max-width: 854px) {
       .projekt h2 {
@@ -2028,5 +2042,11 @@ img.icon {
   position: absolute;
   right: 5%;
   top: 2%; }
+
+.projekt-span {
+  width: 70%; }
+  @media (max-width: 464px) {
+    .projekt-span {
+      width: 90%; } }
 
 /*# sourceMappingURL=main.css.map */
