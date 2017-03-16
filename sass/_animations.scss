@@ -137,12 +137,13 @@
 }
 
 .pbj {
+  visibility: hidden;
   height: 12em;
   right:-80%;
   position:fixed;
-  @include animation(et, 5s, forwards, 1);
+  @include animation(pbj, 5s, forwards, 1);
   animation-timing-function:  ease-in;
-  animation-delay: 80s;
+  //animation-delay: 80s;
   @include breakpoint(xsmall){
     height:7em;
   };
@@ -155,6 +156,21 @@
   right:4em;
   height: 15em;
 }
+
+@include keyframe(pbj) {
+  0% {
+    visibility:visible;
+    bottom:90%;
+    right:-40%;
+
+  }
+  100% {
+    visibility: visible;
+    bottom:30%;
+    right:120%;
+    @include transform(rotate(-1660deg));
+  }
+};
 
 @include keyframe(et){
   0% {
