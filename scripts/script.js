@@ -62,7 +62,7 @@ for (var i = 0; i < halfsiteH1.length; i++) {
 
 let closeButtons = document.getElementsByClassName('back-button');
 
-console.log(closeButtons);
+
 
 for (let i = 0; i < closeButtons.length; i++) {
   closeButtons[i].addEventListener('click', toggleActive);
@@ -70,6 +70,8 @@ for (let i = 0; i < closeButtons.length; i++) {
 
 
 
+
+/*
 
 document.onmouseover = function() {
     //User's mouse is inside the page.
@@ -98,3 +100,4 @@ function preventBackEvent(event) {
     }
   }
 }
+*/
