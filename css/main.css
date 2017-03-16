@@ -505,7 +505,7 @@ nav img {
   animation-iteration-count: 1;
   right: -50%;
   animation-timing-function: ease-in;
-  animation-delay: 70s;
+  animation-delay: 100s;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -ms-transition: all 1s ease;
@@ -556,9 +556,9 @@ nav img {
     height: 17.4em; }
 
 .ufo {
-  height: 15em;
+  height: 45em;
   position: fixed;
-  right: -100%;
+  right: -2000%;
   -webkit-animation-name: ufo;
   -webkit-animation-duration: 5s;
   -webkit-animation-fill-mode: forwards;
@@ -580,7 +580,7 @@ nav img {
   animation-duration: 5s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
-  animation-delay: 100s; }
+  animation-delay: 90s; }
 
 .brown {
   height: 2em;
@@ -636,9 +636,40 @@ nav img {
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
-  animation-delay: 60s; }
+  animation-delay: 50s; }
   @media (max-width: 375px) {
     .et {
+      height: 7em; } }
+
+.pbj {
+  height: 12em;
+  right: -80%;
+  position: fixed;
+  -webkit-animation-name: et;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+  /* forward prevents the animation from restarting! */
+  -moz-animation-name: et;
+  -moz-animation-duration: 5s;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-name: et;
+  -ms-animation-duration: 5s;
+  -ms-animation-fill-mode: forwards;
+  -ms-animation-iteration-count: 1;
+  -o-animation-name: et;
+  -o-animation-duration: 5s;
+  -o-animation-fill-mode: forwards;
+  -o-animation-iteration-count: 1;
+  animation-name: et;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-delay: 80s; }
+  @media (max-width: 375px) {
+    .pbj {
       height: 7em; } }
 
 #gees {
@@ -770,7 +801,7 @@ nav img {
 @-webkit-keyframes ufo {
   0% {
     bottom: 10%;
-    right: -30%;
+    right: -120%;
     -webkit-transform: rotate(10deg);
     -moz-transform: rotate(10deg);
     -ms-transform: rotate(10deg);
@@ -803,7 +834,7 @@ nav img {
 @-moz-keyframes ufo {
   0% {
     bottom: 10%;
-    right: -30%;
+    right: -120%;
     -webkit-transform: rotate(10deg);
     -moz-transform: rotate(10deg);
     -ms-transform: rotate(10deg);
@@ -836,7 +867,7 @@ nav img {
 @-ms-keyframes ufo {
   0% {
     bottom: 10%;
-    right: -30%;
+    right: -120%;
     -webkit-transform: rotate(10deg);
     -moz-transform: rotate(10deg);
     -ms-transform: rotate(10deg);
@@ -869,7 +900,7 @@ nav img {
 @-o-keyframes ufo {
   0% {
     bottom: 10%;
-    right: -30%;
+    right: -120%;
     -webkit-transform: rotate(10deg);
     -moz-transform: rotate(10deg);
     -ms-transform: rotate(10deg);
@@ -902,7 +933,7 @@ nav img {
 @keyframes ufo {
   0% {
     bottom: 10%;
-    right: -30%;
+    right: -120%;
     -webkit-transform: rotate(10deg);
     -moz-transform: rotate(10deg);
     -ms-transform: rotate(10deg);

@@ -85,7 +85,7 @@
   @include animation(elephant,12s,forwads,1);
   right: -50%;
   animation-timing-function: ease-in;
-  animation-delay: 70s;
+  animation-delay: 100s;
   @include transition(all 1s ease);
 }
 
@@ -107,11 +107,11 @@
 }
 
 .ufo {
-  height: 15em;
+  height: 45em;
   position: fixed;
-  right: -100%;
+  right: -2000%;
   @include animation(ufo,5s,forwards,1);
-  animation-delay: 100s;
+  animation-delay: 90s;
 }
 
 .brown {
@@ -128,9 +128,21 @@
   height: 9em;
   right:-80%;
   position:fixed;
-  @include animation(et, 6.6s, forwards, 1);
+ @include animation(et, 6.6s, forwards, 1);
   animation-timing-function:  ease-in;
-  animation-delay: 60s;
+  animation-delay: 50s;
+  @include breakpoint(xsmall){
+    height:7em;
+  };
+}
+
+.pbj {
+  height: 12em;
+  right:-80%;
+  position:fixed;
+  @include animation(et, 5s, forwards, 1);
+  animation-timing-function:  ease-in;
+  animation-delay: 80s;
   @include breakpoint(xsmall){
     height:7em;
   };
@@ -175,7 +187,7 @@
 @include keyframe(ufo) {
   0% {
     bottom:10%;
-    right:-30%;
+    right:-120%;
     @include transform(rotate(10deg));
   }
   30% {
