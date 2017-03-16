@@ -26,8 +26,8 @@ for (let i = 0; i < images.length; i++) {
 
 
 
-function toggleActive(e) {
-  e.preventDefault();
+function toggleActive() {
+  //e.preventDefault();
   var elem = document.getElementsByClassName('half-site');
   var kids = this.parentNode.parentNode.children;
   var removeKids;
