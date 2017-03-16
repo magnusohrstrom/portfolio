@@ -60,11 +60,11 @@ for (var i = 0; i < halfsiteH1.length; i++) {
     toggleActive);
 }
 
-let closeButtons = document.getElementsByClassName('back-button');
+var closeButtons = document.getElementsByClassName('back-button');
 
 
 
-for (let i = 0; i < closeButtons.length; i++) {
+for (var i = 0; i < closeButtons.length; i++) {
   closeButtons[i].addEventListener('click', toggleActive);
 }
 
