@@ -429,24 +429,24 @@ nav img {
 
 .leaf1.leaf12 {
   -webkit-animation-name: leaf12;
-  -webkit-animation-duration: 3s;
+  -webkit-animation-duration: 4s;
   -webkit-animation-fill-mode: forwards;
   -webkit-animation-iteration-count: 1;
   /* forward prevents the animation from restarting! */
   -moz-animation-name: leaf12;
-  -moz-animation-duration: 3s;
+  -moz-animation-duration: 4s;
   -moz-animation-fill-mode: forwards;
   -moz-animation-iteration-count: 1;
   -ms-animation-name: leaf12;
-  -ms-animation-duration: 3s;
+  -ms-animation-duration: 4s;
   -ms-animation-fill-mode: forwards;
   -ms-animation-iteration-count: 1;
   -o-animation-name: leaf12;
-  -o-animation-duration: 3s;
+  -o-animation-duration: 4s;
   -o-animation-fill-mode: forwards;
   -o-animation-iteration-count: 1;
   animation-name: leaf12;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   height: 3em;
@@ -1374,10 +1374,10 @@ nav img {
     transform: rotate(-1000deg); } }
 @-webkit-keyframes leaf1 {
   0% {
-    top: 60%;
+    top: 20%;
     right: -10%; }
   100% {
-    top: 10%;
+    top: 30%;
     right: 110%;
     -webkit-transform: rotate(-1000deg);
     -moz-transform: rotate(-1000deg);
@@ -1386,10 +1386,10 @@ nav img {
     transform: rotate(-1000deg); } }
 @-moz-keyframes leaf1 {
   0% {
-    top: 60%;
+    top: 20%;
     right: -10%; }
   100% {
-    top: 10%;
+    top: 30%;
     right: 110%;
     -webkit-transform: rotate(-1000deg);
     -moz-transform: rotate(-1000deg);
@@ -1398,10 +1398,10 @@ nav img {
     transform: rotate(-1000deg); } }
 @-ms-keyframes leaf1 {
   0% {
-    top: 60%;
+    top: 20%;
     right: -10%; }
   100% {
-    top: 10%;
+    top: 30%;
     right: 110%;
     -webkit-transform: rotate(-1000deg);
     -moz-transform: rotate(-1000deg);
@@ -1410,10 +1410,10 @@ nav img {
     transform: rotate(-1000deg); } }
 @-o-keyframes leaf1 {
   0% {
-    top: 60%;
+    top: 20%;
     right: -10%; }
   100% {
-    top: 10%;
+    top: 30%;
     right: 110%;
     -webkit-transform: rotate(-1000deg);
     -moz-transform: rotate(-1000deg);
@@ -1422,10 +1422,10 @@ nav img {
     transform: rotate(-1000deg); } }
 @keyframes leaf1 {
   0% {
-    top: 60%;
+    top: 20%;
     right: -10%; }
   100% {
-    top: 10%;
+    top: 30%;
     right: 110%;
     -webkit-transform: rotate(-1000deg);
     -moz-transform: rotate(-1000deg);
@@ -1434,7 +1434,7 @@ nav img {
     transform: rotate(-1000deg); } }
 @-webkit-keyframes leaf12 {
   0% {
-    top: 20%;
+    top: 40%;
     right: -10%; }
   100% {
     top: 70%;
@@ -1446,7 +1446,7 @@ nav img {
     transform: rotate(-1500deg); } }
 @-moz-keyframes leaf12 {
   0% {
-    top: 20%;
+    top: 40%;
     right: -10%; }
   100% {
     top: 70%;
@@ -1458,7 +1458,7 @@ nav img {
     transform: rotate(-1500deg); } }
 @-ms-keyframes leaf12 {
   0% {
-    top: 20%;
+    top: 40%;
     right: -10%; }
   100% {
     top: 70%;
@@ -1470,7 +1470,7 @@ nav img {
     transform: rotate(-1500deg); } }
 @-o-keyframes leaf12 {
   0% {
-    top: 20%;
+    top: 40%;
     right: -10%; }
   100% {
     top: 70%;
@@ -1482,7 +1482,7 @@ nav img {
     transform: rotate(-1500deg); } }
 @keyframes leaf12 {
   0% {
-    top: 20%;
+    top: 40%;
     right: -10%; }
   100% {
     top: 70%;
@@ -2042,7 +2042,7 @@ img.icon {
 .back-button {
   height: 2em;
   position: absolute;
-  right: 0.5em;
+  right: 0.7em;
   top: 0;
   cursor: pointer; }
 
