@@ -90,9 +90,12 @@ p {
     left:2px;
     margin:0 0 0 1rem;
     @include transition(all 0.5s ease);
+    /*
     &:hover {
       color:grey;
-    }
+    }    */
+
+
     @include breakpoint(small){
       margin:0;
       font-size: 1.6em;

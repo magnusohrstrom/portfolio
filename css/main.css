@@ -1638,9 +1638,11 @@ p {
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
-    transition: all 0.5s ease; }
-    .half-site h1:hover {
-      color: grey; }
+    transition: all 0.5s ease;
+    /*
+    &:hover {
+      color:grey;
+    }    */ }
     @media (max-width: 464px) {
       .half-site h1 {
         margin: 0;
