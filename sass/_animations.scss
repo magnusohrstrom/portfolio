@@ -143,7 +143,7 @@
   position:fixed;
   @include animation(pbj, 5s, forwards, 1);
   animation-timing-function:  ease-in;
-  //animation-delay: 80s;
+  animation-delay: 80s;
   @include breakpoint(xsmall){
     height:7em;
   };

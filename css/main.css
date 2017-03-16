@@ -667,7 +667,8 @@ nav img {
   animation-duration: 5s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
-  animation-timing-function: ease-in; }
+  animation-timing-function: ease-in;
+  animation-delay: 80s; }
   @media (max-width: 375px) {
     .pbj {
       height: 7em; } }
