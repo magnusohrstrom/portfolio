@@ -2042,8 +2042,9 @@ img.icon {
 .back-button {
   height: 2em;
   position: absolute;
-  right: 5%;
-  top: 2%; }
+  right: 0.5em;
+  top: 0;
+  cursor: pointer; }
 
 .projekt-span {
   width: 70%; }

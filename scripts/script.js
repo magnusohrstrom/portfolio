@@ -60,6 +60,17 @@ for (var i = 0; i < halfsiteH1.length; i++) {
     toggleActive);
 }
 
+let closeButtons = document.getElementsByClassName('back-button');
+
+console.log(closeButtons);
+
+for (let i = 0; i < closeButtons.length; i++) {
+  closeButtons[i].addEventListener('click', toggleActive);
+}
+
+
+
+
 document.onmouseover = function() {
     //User's mouse is inside the page.
     window.innerDocClick = true;
